@@ -1,0 +1,56 @@
+{% extends "things/base.html" %}
+
+{% block content %}
+    <h1>Talk to me almighty one!</h1>
+    <form method="POST" action="">{% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Submit">
+    </form>
+
+    <p class="confidence-output">Confidence: ???</p>
+
+    {% if transcript %}
+        <p>Your last query was: {{ transcript }}</p>
+    {% endif %}
+{% endblock content %}
+
+{% block extrajs %}
+    <script type="text/javascript">
+    window.addEventListener("DOMContentLoaded",	() => {
+    //Set speech recognition
+    window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+    const recognition = new SpeechRecognition(),
+          confidenceOutput = document.querySelector('.confidence-output');        //Start speech recognition
+
+        recognition.start();
+        recognition.maxAlternatives = 4;
+        recognition.interimResults = false;
+
+        //Listen for when the user finishes talking
+        recognition.addEventListener('result', e => {
+
+            //Get transcript of user speech & confidence percentage
+            const transcript = e.results[0][0].transcript.toLowerCase(),
+                  language = e.results[0][0].language,
+                  confidence = (e.results[0][0].confidence * 100).toFixed(1);
+
+            window.speechEvent = e;
+            console.info(e)
+
+            //Output transcript
+            document.getElementById('id_query_string').value = transcript;
+            //document.getElementById('id_language').value = language;
+
+            //Output transcript confidence percentage
+            confidenceOutput.textContent = `Confidence: ${confidence}%`;
+
+        });
+
+        //Restart speech recognition after user has finished talking
+        recognition.addEventListener('end', recognition.start);
+        console.log("I await your request master...");
+
+    });
+    </script>
+{% endblock extrajs %}

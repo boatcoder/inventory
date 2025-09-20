@@ -1,0 +1,25 @@
+[tool.black]
+line-length = 110
+target-version = ['py311']
+include = '\.pyi?$'
+# A regex preceded with ^/ will apply only to files and directories
+# in the root of the project.
+force-exclude = '''^/.*/.*/migrations/.*py'''
+skip-magic-trailing-comma = false
+
+[tool.isort]
+profile = "black"
+sections = ["FUTURE", "STDLIB", "THIRDPARTY", "DJANGO", "FIRSTPARTY", "LOCALFOLDER"]
+known_django = ["django"]
+default_section = "THIRDPARTY"
+known_first_party = ["inventory", "things"]
+
+
+[tool.ruff.lint.per-file-ignores]
+"**/test_*.py" = ["ANN201",] # Exempt return type hint checks for test files
+
+[tool.ruff.lint]
+ignore = ["ANN101"] # Don't annotate self anywhere
+skip_glob = ["*/migrations/*.py",]
+filter_files = true
+skip_gitignore = true

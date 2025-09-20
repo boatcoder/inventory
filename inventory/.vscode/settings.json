@@ -1,0 +1,124 @@
+{
+    "editor.formatOnSave": true,
+    "extensions.autoCheckUpdates": false,
+    "extensions.autoUpdate": false,
+    "python.autoUpdateLanguageServer": false,
+    "update.mode": "manual",
+    "update.enableWindowsBackgroundUpdates": false,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "editor.autoIndent": "keep",
+    "files.trimTrailingWhitespace": true,
+    "eslint.alwaysShowStatus": true,
+    "files.insertFinalNewline": true,
+    "jestrunner.debugOptions": {
+        "args": ["--no-cache"],
+        "sourcemaps": "inline",
+        "disableOptimisticBPs": true
+    },
+    "prettier.printWidth": 110,
+    "eslint.packageManager": "yarn",
+    "prettier.configPath": "package.json",
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit"
+    },
+    "prettier.useEditorConfig": false,
+    "prettier.requireConfig": true,
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "python.jediEnabled": false,
+    "redhat.telemetry.enabled": true,
+    "editor.inlineSuggest.enabled": true,
+    "vs-kubernetes": {
+        "vscode-kubernetes.minikube-path.mac": "/Users/mark/.vs-kubernetes/tools/minikube/darwin-amd64/minikube",
+        "vscode-kubernetes.helm-path.mac": "/Users/mark/.vs-kubernetes/tools/helm/darwin-amd64/helm"
+    },
+    "github.copilot.enable": {
+        "*": true,
+        "yaml": true,
+        "plaintext": true,
+        "markdown": false
+    },
+    "python.experiments.optInto": ["pythonTestAdapter"],
+    "python.envFile": "${workspaceFolder}/../environment",
+    "python.defaultInterpreterPath": "/Users/mark/dev/virtualenvs/dubclub/bin/python",
+    "python.analysis.extraPaths": [
+        "/Users/mark/dev/dubclub/website/dubclub"
+    ],
+    "files.exclude": {
+        ".mypy_cache/*": true,
+        "*.wp*": true,
+        "**/.coverage/*": true,
+        "**/htmlcov/*": true
+    },
+    "python.venvFolders": [
+        "virtualenvs"
+    ],
+    "python.analysis.typeCheckingMode": "basic",
+    "vsintellicode.features.python.deepLearning": "enabled",
+    "editor.rulers": [
+    110,120
+    ],
+    "python.languageServer": "Pylance",
+    "python.pythonPath": "/Users/mark/.virtualenvs/dubclub/bin/python",
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "python.linting.enabled": true,
+    "coverage-gutters.coverageFileNames": [
+
+        "lcov.info",
+        "cov.xml",
+        "coverage.xml",
+        "jacoco.xml",
+        "coverage.cobertura.xml"
+    ],
+    "coverage-gutters.showLineCoverage": false,
+    "coverage-gutters.showRulerCoverage": false,
+    "lcov.path": "${workspaceFolder}/lcov.info",
+    "lcov.branchCoverage": "full",
+    "coverage-gutters.coverageReportFileName": "./htmlcov/index.html",
+    "coverage-gutters.manualCoverageFilePaths": [
+        "./cov.xml"
+    ],
+    "coverage-gutters.showGutterCoverage": true,
+    "python.terminal.activateEnvInCurrentTerminal": true,
+    "python.testing.pytestArgs": [
+        "--cache-clear",
+        "--disable-warnings",
+        "--durations=25",
+        "-v",
+        "--reuse-db",
+        "-n1"
+    ],
+    "python.formatting.provider": "black",
+    "python.formatting.autopep8Path": "",
+    "testing.alwaysRevealTestOnStateChange": false,
+    "testing.autoRun.delay": 1000,
+    "testing.openTesting": "openOnTestFailure",
+    "testing.defaultGutterClickAction": "contextMenu",
+    "testing.followRunningTest": false,
+    "testing.autoRun.mode": "rerun",
+    "html.format.enable": false,
+    "editor.defaultFormatter": null,
+    "prettier.documentSelectors": [
+        "*.js",
+        "*.tsx"
+    ],
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "python.missingPackage.severity": "Warning",
+    "python.analysis.inlayHints.pytestParameters": true,
+    "[python]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.defaultFoldingRangeProvider": "ms-python.vscode-pylance"
+    },
+    "python.analysis.autoFormatStrings": true,
+    "python.REPL.enableREPLSmartSend": false
+}

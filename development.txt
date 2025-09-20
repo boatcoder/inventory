@@ -1,0 +1,2 @@
+-r requirements.txt
+django_debug_toolbar==4.4.6
